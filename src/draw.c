@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yalee <yalee@student.42.fr>                +#+  +:+       +#+        */
+/*   By: yalee <yalee@student.42.fr.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:26:49 by yalee             #+#    #+#             */
-/*   Updated: 2023/03/23 00:46:11 by yalee            ###   ########.fr       */
+/*   Updated: 2023/05/03 19:15:38 by yalee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,10 @@ void	draw_exit(t_program *program, t_vector v)
 	}
 	frame++;
 	if (frame == ANIMATION_FRAMES)
-		v.y += 2;
+		v.y += 10;
 	else if (frame >= ANIMATION_FRAMES * 2)
 	{
-		v.y -= 2;
+		v.y -= 10;
 		frame = 0;
 	}
 	mlx_put_image_to_window(program->mlx, program->window.reference,
